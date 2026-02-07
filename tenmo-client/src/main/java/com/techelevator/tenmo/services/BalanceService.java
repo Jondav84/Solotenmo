@@ -28,7 +28,7 @@ public class BalanceService {
             throw new IllegalStateException("Token is not set.");
         }
 
-        HttpEntity<String> entity = HTTPEntityGenerator.generateAuthEntity(token);
+        HttpEntity<String> entity = HTTPEntityGenerator.generateAuthEntity();
 
         try {
             ResponseEntity<BigDecimal> response = restTemplate.exchange(

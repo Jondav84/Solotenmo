@@ -34,7 +34,7 @@ public class TransferListService {
             throw new IllegalStateException("Token is not set.");
         }
 
-        HttpEntity<String> entity = HTTPEntityGenerator.generateAuthEntity(token);
+        HttpEntity<String> entity = HTTPEntityGenerator.generateAuthEntity();
 
         try {
             ResponseEntity<TransferDto[]> response = restTemplate.exchange(

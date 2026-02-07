@@ -27,7 +27,7 @@ public class UserService {
     }
 
     public List<User> getListOfUsers() {
-        HttpEntity<String> entity = HTTPEntityGenerator.generateAuthEntity(token);
+        HttpEntity<String> entity = HTTPEntityGenerator.generateAuthEntity();
         try {
             ResponseEntity<User[]> response = restTemplate.exchange(
                     userListUrl,

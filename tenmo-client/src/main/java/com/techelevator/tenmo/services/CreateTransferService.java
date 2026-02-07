@@ -28,7 +28,7 @@ public class CreateTransferService {
             throw new IllegalStateException("Token is not set.");
         }
 
-        HttpEntity<TransferDto> entity = HTTPEntityGenerator.generateEntityWithBody(token, newTransfer);
+        HttpEntity<TransferDto> entity = HTTPEntityGenerator.generateEntityWithBody(newTransfer);
         try {
             ResponseEntity<Integer> response = restTemplate.exchange(
                     baseUrl,

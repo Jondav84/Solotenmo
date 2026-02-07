@@ -35,7 +35,7 @@ public class TransferApprovalService {
             throw new IllegalStateException("Token is not set.");
         }
 
-        HttpEntity<TransferDto> entity = HTTPEntityGenerator.generateEntityWithBody(token, selectedTransfer);
+        HttpEntity<TransferDto> entity = HTTPEntityGenerator.generateEntityWithBody(selectedTransfer);
 
         try {
             ResponseEntity<Integer> response = restTemplate.exchange(
